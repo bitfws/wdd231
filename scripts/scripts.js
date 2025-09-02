@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const title = document.querySelector('.currentPageTitle');
     if (title) {
-        title.textContent = document.title;
+        title.textContent = document.title.split(' | ')[1];
     }
 
     for (const page of document.querySelector('nav').children) {
