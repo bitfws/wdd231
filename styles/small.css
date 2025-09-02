@@ -92,6 +92,7 @@ main div {
 }
 
 #about-me p, #about-me q {padding: 0 30px;}
+#about-me q {display: inline-block;}
 
 #student-photo img{
     display: flex;
