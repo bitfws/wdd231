@@ -3,7 +3,6 @@
     --seconday-color: #F3F6F4;
 
     --gray: #f1f3f5;
-
 }
 
 /* reset */
@@ -84,6 +83,7 @@ header nav a {
 }
 
 /* main */
+main h1 {padding: 0 25px;}
 
 main div {
     display: flex;
@@ -91,7 +91,7 @@ main div {
     gap: 10px;
 }
 
-#about-me p, #about-me q {padding: 0 10px;}
+#about-me p, #about-me q {padding: 0 30px;}
 
 #student-photo img{
     display: flex;
@@ -105,33 +105,29 @@ main div {
     padding: 10px 0;
 }
 
+#certification-buttons, #certification-content{
+    width: 90%;
+    margin: auto;
+    
+}
+#certification-buttons{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
 #certification-buttons button, .course {
     background-color: var(--gray);
-    width: 200px;
+    width: 100%;
     padding: 10px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 2px 3px #383d3f28;
 }
 
-.course {width: 100%;}
+.completed {background-color: #383d3f; color: var(--seconday-color);}
 
 .course span {
     margin: auto;
-}
-
-#certification-buttons, #certification-content {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 10px;
-    justify-items: center;
-    align-items: center; 
-}
-
-#certification-content {
-    display: flex;
-    flex-direction: column;
-
 }
 
 /* footer */
@@ -158,37 +154,4 @@ footer * {
     font-size: 20px;
     padding-right: 5px;
     text-align: center;
-}
-
-
-@media screen and (min-width: 768px) {
-    main div {
-        flex-direction: row;
-    }
-
-    #certification-content {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 10px;
-        justify-items: center;
-        align-items: center;
-    }
-
-    #certification-buttons button,.course {width: 300px;}
-
-    #about-me {
-        width: 70%;
-    }
-
-    #student-photo {
-        width: 30%;
-    }
-
-    #menu-mobile {
-        display: none;
-    }
-
-    header {height: auto;}
-    header nav {position: initial;}
-    header nav a {display: inline-block;}
 }

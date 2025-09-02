@@ -1,0 +1,34 @@
+@media screen and (min-width: 768px) {
+    main div {
+        flex-direction: row;
+    }
+    #certification-content {
+
+        flex-direction: column;
+    }
+
+    #certification-buttons, #certification-content{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    }
+
+    .course {display:flex; justify-content: center;}
+
+    #about-me {
+        width: 70%;
+    }
+
+    #student-photo {
+        width: 30%;
+    }
+
+    #menu-mobile {
+        display: none;
+    }
+
+    header {height: auto;}
+    header nav {position: initial; display: flex;}
+    header nav a {display: inline-block;}
+}
