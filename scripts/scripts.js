@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     for (const page of document.querySelector('nav').children) {
-        if (page.textContent === document.title.toLowerCase()) {
+        if (page.textContent === document.title.split(' | ')[1].toLowerCase()) {
             page.classList.add('active');
         } else {
             page.classList.remove('active');
