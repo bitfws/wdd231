@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    const members = async () => await getData('../data/members.json');
+    const members = async () => await getData('/../data/members.json');
     fetchMembers();
 
 /*     const title = document.querySelector('.currentPageTitle');
