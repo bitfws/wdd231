@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Juan Pérez",
+    "address": "123 Calle Ficticia, Ciudad, País",
+    "phone": "+1234567890",
+    "website": "https://www.juanperez.com",
+    "image": "juan_perez.webp",
+    "membership_level": "Active",
+    "additional_info": "Miembro desde 2005, lider en la comunidad."
+  },
+  {
+    "name": "Ana Gómez",
+    "address": "456 Avenida Imaginaria, Ciudad, País",
+    "phone": "+0987654321",
+    "website": "https://www.anagomez.com",
+    "image": "ana_gomez.webp",
+    "membership_level": "Inactive",
+    "additional_info": "Ex-miembro, se alejó hace 3 años."
+  },
+  {
+    "name": "Carlos Martínez",
+    "address": "789 Calle Real, Ciudad, País",
+    "phone": "+1122334455",
+    "website": "https://www.carlosmartinez.com",
+    "image": "carlos_martinez.webp",
+    "membership_level": "Active",
+    "additional_info": "Líder de grupos de estudio."
+  },
+  {
+    "name": "María Rodríguez",
+    "address": "321 Avenida Central, Ciudad, País",
+    "phone": "+2233445566",
+    "website": "https://www.mariarodriguez.com",
+    "image": "maria_rodriguez.webp",
+    "membership_level": "Active",
+    "additional_info": "Voluntaria en el programa de ayuda humanitaria."
+  },
+  {
+    "name": "Luis González",
+    "address": "654 Calle Nueva, Ciudad, País",
+    "phone": "+3344556677",
+    "website": "https://www.luisgonzalez.com",
+    "image": "luis_gonzalez.webp",
+    "membership_level": "Inactive",
+    "additional_info": "Se ha mudado a otro país, aún en contacto."
+  },
+  {
+    "name": "Elena Pérez",
+    "address": "987 Calle Antigua, Ciudad, País",
+    "phone": "+4455667788",
+    "website": "https://www.elenaperez.com",
+    "image": "elena_perez.webp",
+    "membership_level": "Active",
+    "additional_info": "Miembro desde 2012, hermana de Juan Pérez."
+  },
+  {
+    "name": "José Sánchez",
+    "address": "135 Calle del Sol, Ciudad, País",
+    "phone": "+5566778899",
+    "website": "https://www.josesanchez.com",
+    "image": "jose_sanchez.webp",
+    "membership_level": "Active",
+    "additional_info": "Participante regular en eventos de la iglesia."
+  }
+]

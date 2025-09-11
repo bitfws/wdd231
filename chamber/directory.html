@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Frontend Development I | Home</title>
+    <title>Timbuktu Chamber of Commerce</title>
     <meta name="author" content="sairi conejo flores">
-    <meta name="description" content="web frontend development 1">
+    <meta name="description" content="Timbuktu Chamber of Commerce">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/scripts.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,56 +19,43 @@
 </head>
 <body>
 
-    <header>
-        <div>
-            <span>
-                <img src="images/wdd-logo.svg" alt="web frontend logo" loading="lazy">
-                <span>Web Frontend Development I</span>
+    <header class="flex-center">
+        <div id="site" class="flex-center">
+            <img src="images/timbuktu-logo.webp" alt="Timbuktu Chamber of Commerce logo" loading="lazy">
+            <span>Timbuktu Chamber of Commerce</span>
+        </div>
+        <div id="navigation" class="flex-center">
+            <nav id="menu">
+                <a href="#">home</a>
+                <a href="#">discover</a>
+                <a href="#">directory</a>
+                <a href="#">join</a>
+            </nav>
+            <span class="flex-center">
+                    <img src="images/theme-selector.svg" alt="theme selector logo" loading="lazy" id="theme-selector">
                 <button id="menu-mobile">☰</button>
             </span>
-            
         </div>
-        <nav id="navigation">
-            <a href="#">home</a>
-            <a href="#">chamber</a>
-            <a href="#">final</a>
-        </nav>
+        
     </header>
 
     <main>
-        <h1 class="currentPageTitle">Home</h1>
-
-        <div>
-            <section id="about-me">
-                <h2>About Me</h2>
-                <p>
-                    Hello World, I'm Sairi Conejo Flores and I'm from Ecuador.
-                    I've had a passion for technology and everything in it since I was young. I learned on my own and now I'm in college at BYU.
-                </p>
-                <br>
-                <q>Challenges are ways of learning, and curiosity is a sign of interest.</q>
-            </section>
-            <section id="student-photo">
-                <h2>Student Photo</h2>
-                <img src="images/student-photo.webp" alt="student avatar" height="300" loading="lazy">
-            </section>
+        <div id="view_selector">
+            <button id="grid">Grid</button>
+            <button id="list">List</button>
         </div>
-
-        <section id="certifications">
-            <h2>Web Certification Courses</h2>
-            <div id="certification-buttons">
-                <button>All</button>
-                <button>CSE</button>
-                <button>WDD</button>
-            </div>
-            <hr>
-            <div id="certification-content"></div>
-            <p id="credit-counter"></p>
-        </section>
+        <div id="content" class="grid"></div>
     </main>
 
     <footer>
-        <div class="social">
+        <div id="information">
+            <p style="font-weight: 500;">Timbuktu Chamber of Commerce</p>
+            <p>10 Rue De La Paix</p>
+            <p>Timbuktu, Mali 999</p>
+            <p>info@timbuktucc.oth</p>
+            <p>(223) 555-2300</p>
+        </div>
+        <div id="social" class="flex-center">
             <a href="https://github.com/bitfws" target="_blank">
                 <img src="images/github-logo.svg" alt="github-logo" loading="lazy">
             </a>
@@ -80,7 +66,9 @@
                 <img src="images/reddit-logo.svg" alt="reddit-logo" loading="lazy">
             </a>
         </div>
-        <div class="data">
+        <div id="data">
+            <p>WDD231 Class Project</p>
+            <p>Sairi Conejo Flores</p>
             <span id="currentyear"></span>
             <p id="lastModified"></p>
         </div>
