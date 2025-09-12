@@ -21,6 +21,8 @@
     background-color: transparent;
 }
 
+h1 {margin: 20px;}
+
 hr {
     margin: 10px 0;
     border-bottom: 1px solid var(--gray);
@@ -64,17 +66,16 @@ header *, footer * {color: var(--seconday-color);}
     top: -100vw;
     left: 0;
     text-align: center;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
     background-color: var(--dark);
-    transition: top 300ms ease-in-out;
-
-    * {font-size: 5rem;}
-
-    a:hover { text-decoration: underline;}
+    transition: top 300ms ease-in-out;   
 }
+
+#navigation nav * {font-size: 5rem;}
+#navigation nav a:hover { text-decoration: underline;}
 
 #menu-mobile {z-index: 9;font-size: 1.5rem;}
 
@@ -82,13 +83,13 @@ header *, footer * {color: var(--seconday-color);}
 #view_selector {
     display:flex;
     justify-content: center !important;    
+}
 
-    button {
-        background-color: var(--seconday-color);
-        padding: 10px 20px;
-        border-radius: 10px;
-        margin: 10px;  
-    }
+#view_selector button {
+    background-color: var(--seconday-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px;  
 }
 
 #content {
@@ -100,12 +101,11 @@ header *, footer * {color: var(--seconday-color);}
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
-    
-    .card {
-        height: 300px;
-        border-radius: 20px;
+}
 
-    }
+.grid .card {
+    height: 300px;
+    border-radius: 20px;
 }
 
 /* mobile Grid */
@@ -119,23 +119,18 @@ header *, footer * {color: var(--seconday-color);}
 .list {
     display: flex;
     flex-direction: column;
-    
-    .card {
-        display: inherit;
-        justify-content: space-around;
-        align-items: center;
-        
-        * {width: 30%;}
-
-        img {display: none;}
-        
-    }
-
-    .card:nth-child(even){
-        background-color: #c9ccce;
-    }
-
 }
+
+.list .card:nth-child(even){background-color: #c9ccce;}
+
+.list .card {
+    display: inherit;
+    justify-content: space-around;
+    align-items: center;  
+}
+
+.list .card * {width: 30%;}
+.list .card img {display: none;}
 
 .card {
     background-color: var(--gray);
@@ -145,19 +140,16 @@ header *, footer * {color: var(--seconday-color);}
 
 .card:hover {background-color: #c1c7ce !important;}
 
-
 @media screen and (min-width:768px) {
     #navigation nav {
         height: initial;
         position: initial;
         flex-direction: row;
-
-        * {
-            font-size: initial;
-        }
+        display: initial !important;
     }
- 
 
+    #navigation nav * {font-size: initial;}
+ 
     #menu-mobile {display: none;}
 
     footer {

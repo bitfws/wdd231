@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const members = async () => await getData('data/members.json');
     fetchMembers();
 
-/*     const title = document.querySelector('.currentPageTitle');
+    const title = document.querySelector('.currentPageTitle');
     if (title) {
         title.textContent = document.title.split(' | ')[1];
     }
@@ -37,16 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             page.classList.remove('active');
         }
-    } */
+    }
 
     const nav = document.getElementById('menu');
     const menuMobile = document.getElementById('menu-mobile');
     menuMobile.addEventListener('click', () => {
         if (menuMobile.textContent === '☰') {
             menuMobile.textContent = 'X';
+            nav.style.display = 'flex';
             nav.style.top = '0px';
         } else {
             menuMobile.textContent = '☰';
+            nav.style.display = 'none';
             nav.style.top = '-100vw';
         }
     });
