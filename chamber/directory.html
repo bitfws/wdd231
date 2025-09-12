@@ -1,80 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timbuktu Chamber of Commerce | Directory</title>
-    <meta name="author" content="sairi conejo flores">
-    <meta name="description" content="Timbuktu Chamber of Commerce">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/scripts.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-    <meta property="og:title" content="Facebook">
-    <meta property="og:description" content="Log into Facebook to start sharing and connecting with your friends, family, and people you know.">
-    <meta property="og:image" content="images/fb_icon_325x325.png">
-    <meta property="og:url" content="https://bitfws.github.io/wdd231/chamber/" />
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timbuktu Chamber of Commerce | Directory</title>
+  <meta name="author" content="Sairi Conejo Flores">
+  <meta name="description" content="Directory page of the Timbuktu Chamber of Commerce">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/scripts.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  
+  <!-- Open Graph for Social Media -->
+  <meta property="og:title" content="Timbuktu Chamber of Commerce Directory">
+  <meta property="og:description" content="Discover local businesses in Timbuktu.">
+  <meta property="og:image" content="images/timbuktu-logo.webp">
+  <meta property="og:url" content="https://bitfws.github.io/wdd231/chamber/directory">
+  <meta property="og:type" content="website">
 </head>
 <body>
+  <header class="flex-center">
+    <div id="site" class="flex-center">
+      <img src="images/timbuktu-logo.webp" alt="Timbuktu Chamber of Commerce logo" loading="lazy">
+      <span>Timbuktu Chamber of Commerce</span>
+    </div>
+    <div id="navigation" class="flex-center">
+      <nav id="menu">
+        <a href="#">home</a>
+        <a href="#">discover</a>
+        <a href="#">directory</a>
+        <a href="#">join</a>
+      </nav>
+      <span class="flex-center">
+        <img src="images/theme-selector.svg" alt="theme selector logo" loading="lazy" id="theme-selector">
+        <button id="menu-mobile" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
+      </span>
+    </div>
+  </header>
 
-    <header class="flex-center">
-        <div id="site" class="flex-center">
-            <img src="images/timbuktu-logo.webp" alt="Timbuktu Chamber of Commerce logo" loading="lazy">
-            <span>Timbuktu Chamber of Commerce</span>
-        </div>
-        <div id="navigation" class="flex-center">
-            <nav id="menu">
-                <a href="#">home</a>
-                <a href="#">discover</a>
-                <a href="#">directory</a>
-                <a href="#">join</a>
-            </nav>
-            <span class="flex-center">
-                    <img src="images/theme-selector.svg" alt="theme selector logo" loading="lazy" id="theme-selector">
-                <button id="menu-mobile">☰</button>
-            </span>
-        </div>
-        
-    </header>
+  <main>
+    <h1 class="currentPageTitle">Directory</h1>
+    <div id="view_selector">
+      <button id="grid">Grid</button>
+      <button id="list">List</button>
+    </div>
+    <div id="content" class="grid"></div>
+  </main>
 
-    <main>
-        <h1 class="currentPageTitle">Directory</h1>
-        <div id="view_selector">
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
-        </div>
-        <div id="content" class="grid"></div>
-    </main>
-
-    <footer>
-        <div id="information">
-            <p>Timbuktu Chamber of Commerce</p>
-            <p>10 Rue De La Paix</p>
-            <p>Timbuktu, Mali 999</p>
-            <p>info@timbuktucc.oth</p>
-            <p>(223) 555-2300</p>
-        </div>
-        <div id="social" class="flex-center">
-            <a href="https://github.com/bitfws" target="_blank">
-                <img src="images/github-logo.svg" alt="github-logo" loading="lazy">
-            </a>
-            <a href="https://ec.linkedin.com/in/noctenem" target="_blank">
-                <img src="images/linkedin-logo.svg" alt="linkedin-logo" loading="lazy">
-            </a>
-            <a href="https://www.reddit.com/user/bitfws" target="_blank">
-                <img src="images/reddit-logo.svg" alt="reddit-logo" loading="lazy">
-            </a>
-        </div>
-        <div id="data">
-            <p>WDD231 Class Project</p>
-            <p>Sairi Conejo Flores</p>
-            <span id="currentyear"></span>
-            <p id="lastModified"></p>
-        </div>
-    </footer>
-
+  <footer>
+    <div id="information">
+      <p>Timbuktu Chamber of Commerce</p>
+      <p>10 Rue De La Paix</p>
+      <p>Timbuktu, Mali 999</p>
+      <p>info@timbuktucc.oth</p>
+      <p>(223) 555-2300</p>
+    </div>
+    <div id="social" class="flex-center">
+      <a href="https://github.com/bitfws" target="_blank" rel="noopener noreferrer">
+        <img src="images/github-logo.svg" alt="GitHub logo" loading="lazy">
+      </a>
+      <a href="https://ec.linkedin.com/in/noctenem" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin-logo.svg" alt="LinkedIn logo" loading="lazy">
+      </a>
+      <a href="https://www.reddit.com/user/bitfws" target="_blank" rel="noopener noreferrer">
+        <img src="images/reddit-logo.svg" alt="Reddit logo" loading="lazy">
+      </a>
+    </div>
+    <div id="data">
+      <p>WDD231 Class Project</p>
+      <p>Sairi Conejo Flores</p>
+      <span id="currentyear"></span>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
 </body>
 </html>
