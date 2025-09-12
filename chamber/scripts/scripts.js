@@ -1,7 +1,6 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Obtener datos JSON
   async function getData(url) {
     try {
       const response = await fetch(url);
@@ -22,13 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fetchMembers();
 
-  // Actualiza el título de la página según el <title>
   const title = document.querySelector(".currentPageTitle");
   if (title) {
     title.textContent = document.title.split(" | ")[1];
   }
 
-  // Marca la navegación activa
   document.querySelectorAll("nav a").forEach((pageLink) => {
     const pageName = document.title.split(" | ")[1].toLowerCase();
     if (pageLink.textContent.toLowerCase() === pageName) {
@@ -38,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Menú móvil accesible
   const nav = document.getElementById("menu");
   const menuMobile = document.getElementById("menu-mobile");
 
@@ -60,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Cambiar entre vista Grid y List
   const view_selector = document.getElementById("view_selector");
   const content = document.getElementById("content");
 
@@ -76,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Mostrar miembros
   function displayMembers(membersArray) {
     content.innerHTML = "";
 
@@ -111,7 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Año actual y última modificación
   const currentYearSpan = document.getElementById("currentyear");
   if (currentYearSpan) {
     currentYearSpan.textContent = `© ${new Date().getFullYear()} Timbuktu Chamber of Commerce`;
