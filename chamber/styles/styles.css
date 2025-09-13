@@ -119,7 +119,6 @@ footer * {
 }
 
 .grid .card {
-  height: 300px;
   border-radius: 20px;
 }
 
@@ -166,6 +165,8 @@ footer * {
 .card:hover {
   background-color: #c1c7ce !important;
 }
+
+.card a {color: var(--dark); text-decoration: underline;}
 
 @media screen and (min-width: 768px) {
   #navigation nav {
