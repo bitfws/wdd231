@@ -81,6 +81,7 @@ footer * {
   gap: 10px;
   background-color: var(--dark);
   transition: top 300ms ease-in-out;
+  z-index: 3;
 }
 
 #navigation nav * {
@@ -178,8 +179,9 @@ footer * {
 }
 
 #hero img {
-  height: 40vh;
+  height: 50vh;
   width: 100%;
+  object-fit: cover;
 }
 
 #hero button {
@@ -259,10 +261,6 @@ footer * {
     padding: 10px 100px;
   }
 
-  #hero img {
-    height: 76vh;
-    transition: height 600ms ease-in-out;
-  }
   #hero button {
     bottom: 10vh;
     right: 10vw;
