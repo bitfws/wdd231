@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timbuktu Chamber of Commerce | Home</title>
+  <meta name="author" content="Sairi Conejo Flores">
+  <meta name="description" content="Home page of the Timbuktu Chamber of Commerce">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/scripts.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Timbuktu Chamber of Commerce Home">
+  <meta property="og:description" content="Discover local businesses in Timbuktu.">
+  <meta property="og:image" content="https://bitfws.github.io/wdd231/chamber/images/timbuktu-logo.webp">
+  <meta property="og:url" content="https://bitfws.github.io/wdd231/chamber/home">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <header class="flex-center">
+    <div id="site" class="flex-center">
+      <img src="images/timbuktu-logo.webp" alt="Timbuktu Chamber of Commerce logo" loading="lazy">
+      <span>Timbuktu Chamber of Commerce</span>
+    </div>
+    <div id="navigation" class="flex-center">
+      <nav id="menu">
+        <a href="#">home</a>
+        <a href="#">discover</a>
+        <a href="#">directory</a>
+        <a href="#">join</a>
+      </nav>
+      <span class="flex-center">
+        <img src="images/theme-selector.svg" alt="theme selector logo" loading="lazy" id="theme-selector">
+        <button id="menu-mobile" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
+      </span>
+    </div>
+  </header>
+
+  <main>
+    <div id="hero">
+      <img src="images/chamber-hero.webp" alt="chamber hero" width='500' loading='lazy'>
+      <button>Get your free guide</button>
+    </div>
+    <h1 class="currentPageTitle">Home</h1>
+    <div class="container">
+
+      <section id='home-sections' class='grid'>
+        <div id="events">
+          <h2>Events</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptatibus sed cum, nulla vel labore voluptates dignissimos eius nisi fuga temporibus repudiandae unde, praesentium non laudantium obcaecati ut explicabo. Vel.</p>
+        </div>
+        <div id="current-weather"></div>
+        <div id="weather-forecast"></div>
+      </section>
+
+      <div id="business-cards" class='grid'></div>
+    </div>
+  </main>
+
+  <footer>
+    <div id="information">
+      <p>Timbuktu Chamber of Commerce</p>
+      <p>10 Rue De La Paix</p>
+      <p>Timbuktu, Mali 999</p>
+      <p>info@timbuktucc.oth</p>
+      <p>(223) 555-2300</p>
+    </div>
+    <div id="social" class="flex-center">
+      <a href="https://github.com/bitfws" target="_blank" rel="noopener noreferrer">
+        <img src="images/github-logo.svg" alt="GitHub logo" loading="lazy">
+      </a>
+      <a href="https://ec.linkedin.com/in/noctenem" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin-logo.svg" alt="LinkedIn logo" loading="lazy">
+      </a>
+      <a href="https://www.reddit.com/user/bitfws" target="_blank" rel="noopener noreferrer">
+        <img src="images/reddit-logo.svg" alt="Reddit logo" loading="lazy">
+      </a>
+    </div>
+    <div id="data">
+      <p>WDD231 Class Project</p>
+      <p>Sairi Conejo Flores</p>
+      <span id="currentyear"></span>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+</html>

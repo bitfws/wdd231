@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto Flex", sans-serif;
+  font-family: 'Roboto Flex', sans-serif;
   font-weight: 300;
   background-color: transparent;
   text-decoration: none;
@@ -17,7 +17,7 @@
 }
 
 h1 {
-  margin: 20px;
+  margin: 20px 4.8%;
 }
 
 hr {
@@ -64,7 +64,8 @@ footer * {
 
 #theme-selector,
 #social a img {
-  filter: brightness(0) invert(100%) sepia(100%) saturate(500%) hue-rotate(180deg);
+  filter: brightness(0) invert(100%) sepia(100%) saturate(500%)
+    hue-rotate(180deg);
 }
 
 #navigation nav {
@@ -107,7 +108,7 @@ footer * {
   margin: 10px;
 }
 
-#content {
+.container {
   width: 90vw;
   margin: 20px auto;
 }
@@ -162,12 +163,81 @@ footer * {
   padding: 10px;
 }
 
-.card:hover {
+/* .card:hover {
   background-color: #c1c7ce !important;
 }
+ */
+.card a {
+  color: var(--dark);
+  text-decoration: underline;
+}
 
-.card a {color: var(--dark); text-decoration: underline;}
+/* home */
+#hero {
+  position: relative;
+}
 
+#hero img {
+  height: 40vh;
+  width: 100%;
+}
+
+#hero button {
+  position: absolute;
+  bottom: 20vh;
+  right: 50vw;
+  transform: translateX(50%);
+  z-index: 2;
+  background-color: var(--seconday-color);
+  color: var(--primary-color);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#home-sections div h2 {
+  background-color: var(--primary-color);
+  color: var(--seconday-color);
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+#home-sections div {
+  padding: 10px;
+}
+
+#current-weather div {
+  display: flex;
+}
+
+#current-weather div img {
+  width: 100px;
+}
+
+#business-cards {
+  margin: 50px auto;
+}
+#business-cards .card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#business-cards .card hr {
+  border-color: var(--dark);
+}
+
+.card-business-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-business-data img {
+  width: 100px;
+  height: auto;
+}
+/* general */
 @media screen and (min-width: 768px) {
   #navigation nav {
     height: initial;
@@ -187,5 +257,14 @@ footer * {
   footer {
     display: flex;
     padding: 10px 100px;
+  }
+
+  #hero img {
+    height: 76vh;
+    transition: height 600ms ease-in-out;
+  }
+  #hero button {
+    bottom: 10vh;
+    right: 10vw;
   }
 }
