@@ -73,7 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
 async function showHome() {
   const members = await fetchingData('data/members.json');
 
-  const filteredMembers = members.filter(member => ['Active', 'gold', 'silver'].includes(member.membership_level));
+  const filteredMembers = members.filter((member) =>
+    ['Active', 'gold', 'silver'].includes(member.membership_level)
+  );
 
   const numToDisplay = Math.min(3, filteredMembers.length);
   const selectedMembers = getRandomMembers(filteredMembers, numToDisplay);
@@ -86,59 +88,70 @@ async function showHome() {
 
   const fragment = document.createDocumentFragment();
 
-  selectedMembers.forEach(({ name, address, phone, website, image, additional_info, membership_level }) => {
-    const card = document.createElement('div');
-    card.classList.add('card');
+  selectedMembers.forEach(
+    ({
+      name,
+      address,
+      phone,
+      website,
+      image,
+      additional_info,
+      membership_level,
+    }) => {
+      const card = document.createElement('div');
+      card.classList.add('card');
 
-    if (membership_level === 'gold') {
-      card.style.border = '5px solid gold';
-    } else if (membership_level === 'silver') {
-      card.style.border = '5px solid silver';
+      if (membership_level === 'gold') {
+        card.style.border = '5px solid gold';
+      } else if (membership_level === 'silver') {
+        card.style.border = '5px solid silver';
+      }
+
+      const cardTitle = document.createElement('div');
+      cardTitle.classList.add('card-title');
+
+      const nameElement = document.createElement('h3');
+      nameElement.textContent = name;
+
+      const slogan = document.createElement('p');
+      slogan.textContent =
+        additional_info || 'Información adicional no disponible.';
+
+      cardTitle.append(nameElement, slogan);
+
+      const cardBusinessData = document.createElement('div');
+      cardBusinessData.classList.add('card-business-data');
+
+      const img = document.createElement('img');
+      img.src = image ? `images/${image}` : 'default-avatar.png';
+      img.alt = `${name} Avatar`;
+      img.loading = 'lazy';
+      img.width = 200;
+      img.height = 200;
+
+      const businessInfo = document.createElement('div');
+      businessInfo.classList.add('business-info');
+
+      const addressElement = document.createElement('p');
+      addressElement.innerHTML = `<strong>EMAIL:</strong> ${address}`;
+
+      const phoneElement = document.createElement('p');
+      phoneElement.innerHTML = `<strong>PHONE:</strong> ${phone}`;
+
+      const websiteElement = document.createElement('a');
+      websiteElement.href = website;
+      websiteElement.target = '_blank';
+      websiteElement.rel = 'noopener noreferrer';
+      websiteElement.innerHTML = `<strong>URL:</strong> ${website}`;
+
+      businessInfo.append(addressElement, phoneElement, websiteElement);
+      cardBusinessData.append(img, businessInfo);
+
+      const hr = document.createElement('hr');
+      card.append(cardTitle, hr, cardBusinessData);
+      fragment.appendChild(card);
     }
-
-    const cardTitle = document.createElement('div');
-    cardTitle.classList.add('card-title');
-
-    const nameElement = document.createElement('h3');
-    nameElement.textContent = name;
-
-    const slogan = document.createElement('p');
-    slogan.textContent = additional_info || 'Información adicional no disponible.';
-
-    cardTitle.append(nameElement, slogan);
-
-    const cardBusinessData = document.createElement('div');
-    cardBusinessData.classList.add('card-business-data');
-
-    const img = document.createElement('img');
-    img.src = image ? `images/${image}` : 'default-avatar.png';
-    img.alt = `${name} Avatar`;
-    img.loading = 'lazy';
-    img.width = 200;
-    img.height = 200;
-
-    const businessInfo = document.createElement('div');
-    businessInfo.classList.add('business-info');
-
-    const addressElement = document.createElement('p');
-    addressElement.innerHTML = `<strong>EMAIL:</strong> ${address}`;
-
-    const phoneElement = document.createElement('p');
-    phoneElement.innerHTML = `<strong>PHONE:</strong> ${phone}`;
-
-    const websiteElement = document.createElement('a');
-    websiteElement.href = website;
-    websiteElement.target = '_blank';
-    websiteElement.rel = 'noopener noreferrer';
-    websiteElement.innerHTML = `<strong>URL:</strong> ${website}`;
-
-    businessInfo.append(addressElement, phoneElement, websiteElement);
-    cardBusinessData.append(img, businessInfo);
-
-    const hr = document.createElement('hr');
-    card.append(cardTitle, hr, cardBusinessData);
-    fragment.appendChild(card);
-  });
+  );
 
   businessCards.appendChild(fragment);
 }
@@ -147,7 +160,6 @@ function getRandomMembers(members, count) {
   const shuffled = [...members].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count);
 }
-
 
 function showDiscover() {}
 
@@ -238,7 +250,7 @@ async function getWeather() {
         <div>
           <img src=http://openweathermap.org/img/wn/${
             data.weather[0].icon
-          }.png alt='weather icon' loading="lazy">
+          }.png alt='weather icon' width="50" height="50" loading="lazy">
           <section>
           <p><strong>${Math.round(data.main.temp)}°F</strong></p>
           <p>${data.weather[0].description}</p>
