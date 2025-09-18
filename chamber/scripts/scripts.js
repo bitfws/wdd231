@@ -71,9 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // views
 async function showHome() {
-  const members = await fetchingData('data/members.json').then(
-    (result) => result
-  );
+  const members = await fetchingData('data/members.json');
+
+  const filteredMembers = members.filter(member => ['Active', 'gold', 'silver'].includes(member.membership_level));
+
+  const numToDisplay = Math.min(3, filteredMembers.length);
+  const selectedMembers = getRandomMembers(filteredMembers, numToDisplay);
 
   getWeather();
   getForecast();
@@ -81,32 +84,35 @@ async function showHome() {
   const businessCards = document.getElementById('business-cards');
   businessCards.innerHTML = '';
 
-  members.forEach((member, index) => {
-    if (index >= 3) {
-      return;
-    }
+  const fragment = document.createDocumentFragment();
 
+  selectedMembers.forEach(({ name, address, phone, website, image, additional_info, membership_level }) => {
     const card = document.createElement('div');
     card.classList.add('card');
+
+    if (membership_level === 'gold') {
+      card.style.border = '5px solid gold';
+    } else if (membership_level === 'silver') {
+      card.style.border = '5px solid silver';
+    }
 
     const cardTitle = document.createElement('div');
     cardTitle.classList.add('card-title');
 
-    const name = document.createElement('h3');
-    name.textContent = member.name;
+    const nameElement = document.createElement('h3');
+    nameElement.textContent = name;
 
     const slogan = document.createElement('p');
-    slogan.textContent =
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
+    slogan.textContent = additional_info || 'Información adicional no disponible.';
 
-    cardTitle.append(name, slogan);
+    cardTitle.append(nameElement, slogan);
 
     const cardBusinessData = document.createElement('div');
     cardBusinessData.classList.add('card-business-data');
 
     const img = document.createElement('img');
-    img.src = `images/${member.image}`;
-    img.alt = `${member.name} Avatar`;
+    img.src = image ? `images/${image}` : 'default-avatar.png';
+    img.alt = `${name} Avatar`;
     img.loading = 'lazy';
     img.width = 200;
     img.height = 200;
@@ -114,27 +120,34 @@ async function showHome() {
     const businessInfo = document.createElement('div');
     businessInfo.classList.add('business-info');
 
-    const address = document.createElement('p');
-    address.innerHTML = `<strong>EMAIL:</strong> ${member.address}`;
+    const addressElement = document.createElement('p');
+    addressElement.innerHTML = `<strong>EMAIL:</strong> ${address}`;
 
-    const phone = document.createElement('p');
-    phone.innerHTML = `<strong>PHONE:</strong> ${member.phone}`;
+    const phoneElement = document.createElement('p');
+    phoneElement.innerHTML = `<strong>PHONE:</strong> ${phone}`;
 
-    const website = document.createElement('a');
+    const websiteElement = document.createElement('a');
+    websiteElement.href = website;
+    websiteElement.target = '_blank';
+    websiteElement.rel = 'noopener noreferrer';
+    websiteElement.innerHTML = `<strong>URL:</strong> ${website}`;
 
-    website.href = member.website;
-    website.target = '_blank';
-    website.rel = 'noopener noreferrer';
-    website.innerHTML = `<strong>URL:</strong> ${member.website}`;
-
-    businessInfo.append(address, phone, website);
+    businessInfo.append(addressElement, phoneElement, websiteElement);
     cardBusinessData.append(img, businessInfo);
 
     const hr = document.createElement('hr');
     card.append(cardTitle, hr, cardBusinessData);
-    businessCards.appendChild(card);
+    fragment.appendChild(card);
   });
+
+  businessCards.appendChild(fragment);
 }
+
+function getRandomMembers(members, count) {
+  const shuffled = [...members].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
+
 
 function showDiscover() {}
 
