@@ -3,6 +3,7 @@
   --seconday-color: #f3f6f4;
   --gray: #f1f3f5;
   --dark: #171717;
+  --border-color: #dde5ec;
 }
 
 * {
@@ -28,6 +29,11 @@ hr {
 button,
 .btn {
   cursor: pointer;
+  background-color: var(--dark);
+  color: var(--seconday-color);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0;
 }
 
 .active {
@@ -118,6 +124,7 @@ footer * {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  margin: auto;
 }
 
 .grid .card {
@@ -129,9 +136,15 @@ footer * {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media screen and (max-width: 480px) {
-  .grid {
+  .grid,
+  .container.join.grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .membership-cards {
+    width: 80%;
   }
 }
 
@@ -164,10 +177,6 @@ footer * {
   padding: 10px;
 }
 
-/* .card:hover {
-  background-color: #c1c7ce !important;
-}
- */
 .card a {
   color: var(--dark);
   text-decoration: underline;
@@ -216,9 +225,15 @@ footer * {
   height: 50px;
 }
 
-#business-cards {
+#business-cards,
+.membership-cards {
   margin: 50px auto;
 }
+
+.membership-cards {
+  width: 300px;
+}
+
 #business-cards .card {
   display: flex;
   flex-direction: column;
@@ -240,6 +255,46 @@ footer * {
   width: 100px;
   height: auto;
 }
+
+/* join */
+.container.grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+.membership-cards {
+  animation: fadeInCard 1s ease forwards;
+}
+
+.membership-cards div {
+  background-color: var(--gray);
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#join-form {
+  width: 300px;
+  margin: auto;
+}
+
+#join-form,
+#join-form label {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+label input {
+  margin: 5px 0;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+label textarea,
+label select {
+  border: 1px solid var(--border-color);
+  resize: none;
+}
+
 /* general */
 @media screen and (min-width: 768px) {
   #navigation nav {
@@ -266,4 +321,44 @@ footer * {
     bottom: 10vh;
     right: 10vw;
   }
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: auto;
+ 
+}
+
+.modal-content {
+  background: var(--seconday-color);
+  padding: 2rem;
+  margin: 15% auto;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.close {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--primary-color);
+  position: absolute;
+  right: 22%;
+  top: 20%;
 }

@@ -62,6 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
     case 'join':
       showJoin();
       break;
+    case 'congratulations':
+      showCongratulations();
+      break;
 
     default: // home
       showHome();
@@ -216,7 +219,106 @@ async function showDirectory() {
   });
 }
 
-function showJoin() {}
+function showJoin() {
+  const timestampInput = document.getElementById('timestamp');
+  if (timestampInput) {
+    const now = new Date().toISOString();
+    timestampInput.value = now;
+  }
+
+  const membershipCards = document.querySelector('.membership-cards');
+  const modal = document.querySelector('.modal');
+  const modalContent = document.querySelector('.modal-content');
+
+  Array.from(membershipCards.children).forEach((button) => {
+    button.addEventListener('click', () => {
+      if (button.firstElementChild.textContent === 'NP Membership') {
+        modal.showModal();
+        modalContent.innerHTML = `
+              <h3>${button.firstElementChild.textContent}</h3>
+              <hr>
+              <ul>
+                <li>Access to basic content (articles, videos, etc.)</li>
+                <li>Discounts on products/services from the platform</li>
+                <li>Access to general events</li>
+                <li>Recognition as a member on the website or in the newsletter</li>
+              </ul>
+              `;
+      } else if (button.firstElementChild.textContent === 'Bronze Membership') {
+        modal.showModal();
+        modalContent.innerHTML = `
+              <h3>${button.firstElementChild.textContent}</h3>
+              <hr>
+              <ul>
+                <li>All benefits from the Basic Level</li>
+                <li>Early access to events or exclusive content</li>
+                <li>Access to webinars or online training</li>
+                <li>Basic advertising (name or logo in a highlighted space)</li>
+                <li>Discounts on partner products or services</li>
+                <li>Entry into exclusive raffles or contests</li>
+              </ul>
+              `;
+      } else if (button.firstElementChild.textContent === 'Silver Membership') {
+        modal.showModal();
+        modalContent.innerHTML = `
+              <h3>${button.firstElementChild.textContent}</h3>
+              <hr>
+              <ul>
+                <li>All benefits from the previous levels</li>
+                <li>Access to VIP events, including networking or private meetups</li>
+                <li>Featured advertising on the homepage (like a “spotlight” position)</li>
+                <li>Personalized consulting or mentorship sessions</li>
+                <li>Access to an exclusive community for premium members</li>
+                <li>Limited edition products/services or special offers</li>
+                <li>Invitations to special events (e.g., dinners, private meetings)</li>
+              </ul>
+              `;
+      } else if (button.firstElementChild.textContent === 'Gold Membership') {
+        modal.showModal();
+        modalContent.innerHTML = `
+              <h3>${button.firstElementChild.textContent}</h3>
+              <hr>
+              <ul>
+                <li>All benefits from previous levels</li>
+                <li>Opportunity to organize an event with the platform (with support and promotion)</li>
+                <li>Unlimited access to exclusive trainings or personalized courses</li>
+                <li>Premium visibility across all channels (news, blog, etc.)</li>
+                <li>Access to a personal assistant or priority support</li>
+                <li>Significant discounts or exclusive benefits from partners</li>
+                <li>Collaboration or co-promotion opportunities with the brand</li>
+                <li>Participation in an ambassador program with special rewards</li>
+              </ul>
+              `;
+      }
+    });
+  });
+
+  const closeModal = document.querySelector('.close');
+  closeModal.addEventListener('click', (e) => {
+    modal.close();
+  });
+}
+
+function showCongratulations() {
+  // thank you
+  const params = new URLSearchParams(window.location.search);
+  const fields = [
+    'firstName',
+    'lastName',
+    'email',
+    'phone',
+    'organization',
+    'timestamp',
+  ];
+
+  const list = document.getElementById('submitted-data');
+
+  fields.forEach((field) => {
+    const li = document.createElement('li');
+    li.textContent = `${field}: ${params.get(field) || 'Not provided'}`;
+    list.appendChild(li);
+  });
+}
 
 // fetch
 async function fetchingData(url) {

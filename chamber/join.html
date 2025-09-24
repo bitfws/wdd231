@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timbuktu Chamber of Commerce | Join</title>
+    <meta name="author" content="Sairi Conejo Flores">
+    <meta name="description" content="Home page of the Timbuktu Chamber of Commerce">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/scripts.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Timbuktu Chamber of Commerce Join">
+    <meta property="og:description" content="Discover local businesses in Timbuktu.">
+    <meta property="og:image" content="https://bitfws.github.io/wdd231/chamber/images/timbuktu-logo.webp">
+    <meta property="og:url" content="https://bitfws.github.io/wdd231/chamber/join">
+    <meta property="og:type" content="website">
+  </head>
+  <body>
+    <header class="flex-center">
+        <div id="site" class="flex-center">
+        <img src="images/timbuktu-logo.webp" alt="Timbuktu Chamber of Commerce logo" loading="lazy">
+        <span>Timbuktu Chamber of Commerce</span>
+        </div>
+        <div id="navigation" class="flex-center">
+        <nav id="menu">
+            <a href="#">home</a>
+            <a href="#">discover</a>
+            <a href="#">directory</a>
+            <a href="#">join</a>
+        </nav>
+        <span class="flex-center">
+            <img src="images/theme-selector.svg" alt="theme selector logo" loading="lazy" id="theme-selector">
+            <button id="menu-mobile" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
+        </span>
+        </div>
+    </header>
+
+    <main>
+      <h1 class="currentPageTitle">Join</h1>
+      <div class="container join grid">
+        <form method="get" action="thankyou.html" id='join-form'>
+          <label>
+            First Name:
+            <input type="text" name="firstName" title="First Name" autocomplete="given-name" required>
+          </label>
+
+          <label>
+            Last Name:
+            <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
+          </label>
+
+          <label>
+            Organizational Title:
+            <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+          </label>
+
+          <label>
+            Email:
+            <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@example.com" required>
+          </label>
+
+          <label>
+            Mobile Phone:
+            <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required>
+          </label>
+
+          <label>
+            Organization Name:
+            <input type="text" name="organization" title="Organization Name" autocomplete="organization" required>
+          </label>
+
+          <label>
+            Membership Level:
+            <select name="membership" title="Membership Level">
+              <option value="NP">NP Membership</option>
+              <option value="Bronze">Bronze Membership</option>
+              <option value="Silver">Silver Membership</option>
+              <option value="Gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label>
+            Business Description:
+            <textarea rows='6' name="description" title="Business Description" ></textarea>
+          </label>
+
+          <input type="hidden" name="timestamp" id="timestamp">
+
+          <input class='btn' type="submit" value="Send Application">
+        </form>
+
+        <section class="membership-cards">
+          <div>
+            <h3>NP Membership</h3>
+            <button type="button">
+              More Info
+            </button>
+          </div>
+          <div>
+            <h3>Bronze Membership</h3>
+            <button type="button">
+              More Info
+            </button>
+          </div>
+          <div>
+            <h3>Silver Membership</h3>
+            <button type="button">
+              More Info
+            </button>
+          </div>
+          <div>
+            <h3>Gold Membership</h3>
+            <button type="button">
+              More Info
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <dialog class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content"></div>
+      </dialog>
+    </main>
+
+    <footer>
+        <div id="information">
+        <p>Timbuktu Chamber of Commerce</p>
+        <p>10 Rue De La Paix</p>
+        <p>Timbuktu, Mali 999</p>
+        <p>info@timbuktucc.oth</p>
+        <p>(223) 555-2300</p>
+        </div>
+        <div id="social" class="flex-center">
+        <a href="https://github.com/bitfws" target="_blank" rel="noopener noreferrer">
+            <img src="images/github-logo.svg" alt="GitHub logo" loading="lazy">
+        </a>
+        <a href="https://ec.linkedin.com/in/noctenem" target="_blank" rel="noopener noreferrer">
+            <img src="images/linkedin-logo.svg" alt="LinkedIn logo" loading="lazy">
+        </a>
+        <a href="https://www.reddit.com/user/bitfws" target="_blank" rel="noopener noreferrer">
+            <img src="images/reddit-logo.svg" alt="Reddit logo" loading="lazy">
+        </a>
+        </div>
+        <div id="data">
+        <p>WDD231 Class Project</p>
+        <p>Sairi Conejo Flores</p>
+        <span id="currentyear"></span>
+        <p id="lastModified"></p>
+        </div>
+    </footer>
+  </body>
+</html>
