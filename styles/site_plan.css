@@ -50,7 +50,8 @@ footer {
   background-color: var(--primary-color);
   color: var(--light);
 }
-.wireframe img {
-  width: 100%;
-  max-width: 500px;
+.wireframe a {
+  cursor: pointer;
+  color: var(--dark);
+  text-decoration: underline;
 }
