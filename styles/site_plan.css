@@ -1,10 +1,8 @@
 :root {
-    --primary-color: #4caf50;
-
-    --light: #f4f4f4;
-    --dark: #333;
-
-    --accent-color: #2c6e1f;
+    --primary-color: #181717;
+    --secondary-color: #f4f4f4;
+    --gray: #f1f3f5;
+    --border-color: #dde5ec;
 }
 
 * {
@@ -20,19 +18,13 @@
     text-decoration: none;
 }
 
-body {
-  background-color: var(--light);
-  color: var(--dark);
-  margin: 0;
-  padding: 0;
-}
 header {
   background-color: var(--primary-color);
   padding: 10px 0;
   text-align: center;
 }
 header h1{
-    color: var(--light);
+    color: var(--secondary-color);
 }
 
 h2 {font-weight: bold;}
@@ -48,7 +40,7 @@ footer {
   text-align: center;
   padding: 10px 0;
   background-color: var(--primary-color);
-  color: var(--light);
+  color: var(--secondary-color);
 }
 .wireframe a {
   cursor: pointer;
