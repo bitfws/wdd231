@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Wander the Walled City (Ciudad Amurallada)",
+    "address": "Historic Center of Cartagena, Bolívar, Colombia",
+    "description": "The Walled City is a UNESCO World Heritage site. You can wander through its charming streets, visit local boutiques, and explore beautiful plazas like Plaza Santo Domingo and Plaza de los Coches.",
+    "cost": "Free (just for walking around; some attractions or museums inside may charge entry)",
+    "photo_url": "cartagena_01.webp"
+  },
+  {
+    "name": "Visit Castillo San Felipe de Barajas",
+    "address": "Calle 37, Cartagena, Bolívar, Colombia",
+    "description": "A massive fortress built in the 16th century, Castillo San Felipe offers insight into Cartagena’s military past. You can explore its tunnels and enjoy spectacular views of the city.",
+    "cost": "₡25,000 COP (about $6-7 USD)",
+    "photo_url": "cartagena_02.webp"
+  },
+  {
+    "name": "Relax at Playa Blanca",
+    "address": "Isla Barú, Cartagena, Bolívar, Colombia",
+    "description": "Playa Blanca is a stunning white-sand beach with crystal-clear waters. It’s a great spot for swimming, sunbathing, and enjoying fresh seafood at beachside restaurants.",
+    "cost": "Free entry to the beach; expect to pay around ₡30,000-50,000 COP (approx. $8-12 USD) for a beach chair or lunch.",
+    "photo_url": "cartagena_03.webp"
+  },
+  {
+    "name": "Explore the Rosario Islands",
+    "address": "Departing from Cartagena’s dock (Port of Cartagena), Cartagena, Bolívar, Colombia",
+    "description": "A scenic boat ride from Cartagena takes you to the Rosario Islands, famous for their clear waters, coral reefs, and wildlife. It’s perfect for snorkeling, diving, or simply relaxing.",
+    "cost": "Boat tours start from ₡100,000 COP (about $25 USD) per person.",
+    "photo_url": "cartagena_04.webp"
+  },
+  {
+    "name": "Walk the Wall of Cartagena (Murallas)",
+    "address": "Calle de la Serrezuela, Cartagena, Bolívar, Colombia",
+    "description": "The wall that surrounds Cartagena is one of the most well-preserved in the world. Take a leisurely walk along the ramparts, particularly during sunset for incredible views of the city and ocean.",
+    "cost": "Free",
+    "photo_url": "cartagena_05.webp"
+  },
+  {
+    "name": "Visit the Palace of the Inquisition",
+    "address": "Plaza de Bolívar, Cartagena, Bolívar, Colombia",
+    "description": "This historical museum offers a fascinating look at the Spanish Inquisition, with exhibits on torture instruments, colonial history, and art from the 16th century.",
+    "cost": "₡20,000 COP (around $5 USD)",
+    "photo_url": "cartagena_06.webp"
+  },
+  {
+    "name": "Enjoy the Nightlife at Getsemaní",
+    "address": "Getsemaní neighborhood, Cartagena, Bolívar, Colombia",
+    "description": "Known for its vibrant street art, lively atmosphere, and hip bars, Getsemaní is the place to go if you’re looking for a fun night out. It’s the bohemian heart of Cartagena, and you can dance the night away at bars like Café Havana.",
+    "cost": "Free to explore, but expect to pay for drinks at bars.",
+    "photo_url": "cartagena_07.webp"
+  },
+  {
+    "name": "Take a Chiva Rumbera Party Bus",
+    "address": "Pick-up from various points in Cartagena (usually from the historic center)",
+    "description": "The Chiva Rumbera is an open-air party bus, decorated in vibrant colors, that tours the city while playing Colombian music and offering drinks. It’s a fun way to experience Cartagena’s nightlife with friends.",
+    "cost": "Around ₡60,000 COP (about $15 USD) per person",
+    "photo_url": "cartagena_08.webp"
+  },
+  {
+    "name": "Visit San Basilio de Palenque",
+    "address": "San Basilio de Palenque, Bolívar, Colombia (about an hour's drive from Cartagena)",
+    "description": "This UNESCO-listed village is steeped in African heritage. It's famous for its music, language, and culture. Visit to learn about the town’s history as the first free African settlement in the Americas.",
+    "cost": "Guided tours typically cost around ₡40,000-60,000 COP (about $10-15 USD) per person.",
+    "photo_url": "cartagena_09.webp"
+  },
+  {
+    "name": "Tour the Mercado de Bazurto",
+    "address": "Mercado de Bazurto, Cartagena, Bolívar, Colombia",
+    "description": "For a truly authentic experience, head to the Bazurto Market, known for its chaotic but colorful vibe. You’ll find fresh produce, spices, seafood, and local goods. Be sure to keep an eye on your belongings!",
+    "cost": "Free to explore, but you may want to buy food or local crafts.",
+    "photo_url": "cartagena_10.webp"
+  }
+]

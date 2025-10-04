@@ -164,7 +164,66 @@ function getRandomMembers(members, count) {
   return shuffled.slice(0, count);
 }
 
-function showDiscover() {}
+async function showDiscover() {
+  try {
+    const places = await fetchingData('data/data.json');
+
+    const cardContainer = document.querySelector('.discover-cards');
+    if (!cardContainer) {
+      console.error('Card container not found');
+      return;
+    }
+
+    places.forEach((place, index) => {
+      const card = document.createElement('div');
+      card.classList.add('card');
+
+      card.innerHTML = `
+        <h2 class='title'>${place.name}</h2>
+        <img src="images/${place.photo_url}" alt="${place.name}" class='photo' loading="lazy" width="200">  
+        <address class='address'>${place.address}</address>
+        <p class='description'>${place.description}</p>
+        <button>learn more</button>
+      `;
+
+      cardContainer.appendChild(card);
+    });
+
+    const message = getLastVisitMessage();
+    document.querySelector('#visit-message').innerHTML = message;
+
+    localStorage.setItem('lastVisit', new Date().getTime());
+  } catch (error) {
+    console.error('Error fetching members:', error);
+    const visitMessage = document.querySelector('#visit-message');
+    if (visitMessage) {
+      visitMessage.innerHTML =
+        'There was an issue loading the data, please try again.';
+    }
+  }
+}
+
+function getLastVisitMessage() {
+  const lastVisit = localStorage.getItem('lastVisit');
+  const currentDate = new Date();
+
+  if (lastVisit) {
+    const lastVisitDate = new Date(parseInt(lastVisit));
+    const daysBetween = Math.floor(
+      (currentDate - lastVisitDate) / (1000 * 3600 * 24)
+    );
+
+    if (daysBetween === 0) {
+      return 'You came back so soon! Awesome!';
+    } else if (daysBetween === 1) {
+      return 'You visited 1 day ago.';
+    } else {
+      return `You visited ${daysBetween} days ago.`;
+    }
+  } else {
+    return 'Welcome! Let us know if you have any questions.';
+  }
+}
 
 async function showDirectory() {
   const members = await fetchingData('data/members.json').then(
