@@ -182,10 +182,15 @@ async function showDiscover() {
         <h2 class='title'>${place.name}</h2>
         <img src="images/${place.photo_url}" alt="${place.name}" class='photo' loading="lazy" width="200">  
         <address class='address'>${place.address}</address>
+<<<<<<< HEAD
         <div class='description'>
           <p>${place.description}</p>
           <button>learn more</button>
         </div>
+=======
+        <p class='description'>${place.description}</p>
+        <button>learn more</button>
+>>>>>>> 9cc5067291a9093ecf6919632817a95c302e1889
       `;
 
       cardContainer.appendChild(card);
