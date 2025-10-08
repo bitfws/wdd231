@@ -1,0 +1,122 @@
+[
+    {
+      "name": "Yosemite National Park",
+      "location": "California, USA",
+      "difficulty": "Moderate to Hard",
+      "distance": "3000 km of trails",
+      "highlight": "Impressive waterfalls and rock formations like El Capitan and Half Dome.",
+      "image_url": "../images/Yosemite_National_Park.webp"
+    },
+    {
+      "name": "Inca Trail",
+      "location": "Peru",
+      "difficulty": "Hard",
+      "distance": "43 km",
+      "highlight": "Historical trail leading to the ancient city of Machu Picchu.",
+      "image_url": "../images/Inca_Trail.webp"
+    },
+    {
+      "name": "Seven Lakes Route",
+      "location": "Argentina (Patagonia)",
+      "difficulty": "Easy to Moderate",
+      "distance": "27 km",
+      "highlight": "A trail surrounded by glacial lakes and mountains in the Andes region.",
+      "image_url": "../images/Seven_Lakes_Route.webp"
+    },
+    {
+      "name": "Grand Canyon Rim-to-Rim Trail",
+      "location": "Arizona, USA",
+      "difficulty": "Hard",
+      "distance": "27.3 km",
+      "highlight": "A challenging trail that crosses the Grand Canyon from one rim to the other.",
+      "image_url": "../images/Grand_Canyon_Rim-to-Rim_Trail.webp"
+    },
+    {
+      "name": "Camino de Santiago",
+      "location": "Spain",
+      "difficulty": "Moderate",
+      "distance": "800 km",
+      "highlight": "A historic pilgrimage route across Spain, ending at Santiago de Compostela.",
+      "image_url": "../images/Camino_de_Santiago.webp"
+    },
+    {
+      "name": "Dolomites Mountains",
+      "location": "Italy",
+      "difficulty": "Moderate to Hard",
+      "distance": "Over 1200 km of trails",
+      "highlight": "Impressive rock formations and panoramic views of the Dolomites Alps.",
+      "image_url": "../images/Dolomites_Mountains.webp"
+    },
+    {
+      "name": "Torres del Paine",
+      "location": "Chile (Patagonia)",
+      "difficulty": "Hard",
+      "distance": "W Circuit - 74 km",
+      "highlight": "A National Park famous for its mountains, glaciers, and turquoise lakes.",
+      "image_url": "../images/Torres_del_Paine.webp"
+    },
+    {
+      "name": "Mount Fuji",
+      "location": "Japan",
+      "difficulty": "Hard",
+      "distance": "8 km ascent",
+      "highlight": "The iconic volcano and highest mountain in Japan, famous for its views and nature.",
+      "image_url": "../images/Mount_Fuji.webp"
+    },
+    {
+      "name": "Sentiero Azzurro",
+      "location": "Cinque Terre, Italy",
+      "difficulty": "Easy to Moderate",
+      "distance": "12 km",
+      "highlight": "A trail that connects the beautiful coastal villages of Cinque Terre.",
+      "image_url": "../images/Sentiero_Azzurro.webp"
+    },
+    {
+      "name": "Banff National Park",
+      "location": "Canada (Alberta)",
+      "difficulty": "Moderate",
+      "distance": "1500 km of trails",
+      "highlight": "Trails with views of Rocky Mountains, turquoise lakes, and wildlife.",
+      "image_url": "../images/Banff_National_Park.webp"
+    },
+    {
+      "name": "Annapurna Circuit",
+      "location": "Nepal",
+      "difficulty": "Hard",
+      "distance": "150 km",
+      "highlight": "One of the most famous trekking routes in the world, with views of Himalayan peaks.",
+      "image_url": "../images/Annapurna_Circuit.webp"
+    },
+    {
+      "name": "Na Pali Coast Trail",
+      "location": "Kauai, Hawaii, USA",
+      "difficulty": "Hard",
+      "distance": "22 km",
+      "highlight": "A trail that runs along the spectacular Na Pali coastline, known for its cliffs and beaches.",
+      "image_url": "../images/Na_Pali_Coast_Trail.webp"
+    },
+    {
+      "name": "Laugavegur Trail",
+      "location": "Iceland",
+      "difficulty": "Moderate",
+      "distance": "55 km",
+      "highlight": "A trail in Iceland offering volcanic landscapes, glaciers, and geysers.",
+      "image_url": "../images/Laugavegur_Trail.webp"
+    },
+    {
+      "name": "Mount Kilimanjaro",
+      "location": "Tanzania",
+      "difficulty": "Hard",
+      "distance": "50 km",
+      "highlight": "Africa's highest point, a volcanic mountain challenging trekkers to reach its summit.",
+      "image_url": "../images/Mount_Kilimanjaro.webp"
+    },
+    {
+      "name": "Amazon River",
+      "location": "South America",
+      "difficulty": "Easy",
+      "distance": "Over 4000 km of jungle trails",
+      "highlight": "Explore the world's largest tropical rainforest, home to incredible biodiversity.",
+      "image_url": "../images/Amazon_River.webp"
+    }
+  ]
