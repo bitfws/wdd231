@@ -3,61 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timbuktu Chamber of Commerce | Discover</title>
+  <title>Hiking and Trail Exploration | Discover</title>
   <meta name="author" content="Sairi Conejo Flores">
-  <meta name="description" content="Discover page of the Timbuktu Chamber of Commerce">
+  <meta name="description" content="Discover page of Hiking and Trail Exploration.">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/scripts.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-  <meta property="og:title" content="Timbuktu Chamber of Commerce Discover">
-  <meta property="og:description" content="Discover local businesses in Timbuktu.">
-  <meta property="og:image" content="https://bitfws.github.io/wdd231/chamber/images/timbuktu-logo.webp">
-  <meta property="og:url" content="https://bitfws.github.io/wdd231/chamber/discover">
+  <meta property="og:title" content="A website for outdoor hiking and trail exploration Discover">
+  <meta property="og:description" content="A website for outdoor hiking and trail exploration.">
+  <meta property="og:image" content="https://bitfws.github.io/wdd231/final/images/hiking_and_trail_exploration-logo.webp">
+  <meta property="og:url" content="https://bitfws.github.io/wdd231/final/discover">
   <meta property="og:type" content="website">
 </head>
 <body>
-  <header>
-    <div id="site" class="flex-center">
-      <img src="images/timbuktu-logo.webp" alt="Timbuktu Chamber of Commerce logo" loading="lazy">
-      <span>Timbuktu Chamber of Commerce</span>
+
+  <header class="row p1x2">
+    <div class="row">
+      <img src="images/hiking_and_trail_exploration-logo.webp" alt="hiking and trail exploration logo" loading="lazy">
+      <span>Hiking and Trail Exploration</span>
     </div>
-    <div id="navigation" class="flex-center">
-      <nav id="menu">
+    <div class="row">
+      <nav>
         <a href="index.html">home</a>
         <a href="discover.html">discover</a>
-        <a href="directory.html">directory</a>
         <a href="join.html">join</a>
       </nav>
-      <span class="flex-center">
+      <span class="row">
         <img src="images/theme-selector.svg" alt="theme selector logo" loading="lazy" id="theme-selector">
         <button id="menu-mobile" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
       </span>
     </div>
   </header>
 
+  <main></main>
 
-
-    <aside class="sidebar">
-        <p id="visit-message"></p>
-    </aside> 
-
-    <main class="container">
-    <h1 class="currentPageTitle">Discover</h1>
-        <div class="discover-cards"></div>
-    </main>
-
-  <footer>
-    <div id="information">
-      <p>Timbuktu Chamber of Commerce</p>
-      <p>10 Rue De La Paix</p>
-      <p>Timbuktu, Mali 999</p>
-      <p>info@timbuktucc.oth</p>
-      <p>(223) 555-2300</p>
-    </div>
-    <div id="social" class="flex-center">
+  <footer class="col p2">
+    <div>
       <a href="https://github.com/bitfws" target="_blank" rel="noopener noreferrer">
         <img src="images/github-logo.svg" alt="GitHub logo" loading="lazy">
       </a>
@@ -68,12 +51,12 @@
         <img src="images/reddit-logo.svg" alt="Reddit logo" loading="lazy">
       </a>
     </div>
-    <div id="data">
-      <p>WDD231 Class Project</p>
-      <p>Sairi Conejo Flores</p>
-      <span id="currentyear"></span>
-      <p id="lastModified"></p>
+    <div>
+      <p id="currentyear"></p>
+      <small id="lastModified"></small>
     </div>
   </footer>
+
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

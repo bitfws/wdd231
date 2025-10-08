@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hiking and Trail Exploration | Home</title>
+  <meta name="author" content="Sairi Conejo Flores">
+  <meta name="description" content="Home page of Hiking and Trail Exploration.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <meta property="og:title" content="A website for outdoor hiking and trail exploration Home">
+  <meta property="og:description" content="A website for outdoor hiking and trail exploration.">
+  <meta property="og:image" content="https://bitfws.github.io/wdd231/final/images/hiking_and_trail_exploration-logo.webp">
+  <meta property="og:url" content="https://bitfws.github.io/wdd231/final/home">
+  <meta property="og:type" content="website">
+</head>
+<body>
+
+  <header class="row p1x2">
+    <div class="row">
+      <img src="images/hiking_and_trail_exploration-logo.webp" alt="hiking and trail exploration logo" loading="lazy">
+      <span>Hiking and Trail Exploration</span>
+    </div>
+    <div class="row">
+      <nav>
+        <a href="index.html">home</a>
+        <a href="discover.html">discover</a>
+        <a href="join.html">join</a>
+      </nav>
+      <span class="row">
+        <img src="images/theme-selector.svg" alt="theme selector logo" loading="lazy" id="theme-selector">
+        <button id="menu-mobile" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
+      </span>
+    </div>
+  </header>
+
+  <main>
+    <div class="cards-container">
+      <div>
+        <h1>Hiking and Trail Exploration</h1>
+        <p>Explore the World Through Unique Trails</p>
+        <p>Immerse yourself in nature and connect with the outdoors as you explore the best mountain trails, forests, valleys, and coasts.</p>
+        <hr>
+        <a href="/join.html" class="btn">Join Now</a>
+      </div>
+      <img src="images/hiking_photo_1.webp" alt="hiking_photo_1" loading="lazy">
+    </div>
+    <h2>Our Team</h2>
+    <div class="cards-container">
+      <div class="card">
+        <img src="images/Safety_Officer.webp" alt="Safety Officer photo" loading="lazy">
+        <div>
+          <h2>Marco Antonio</h2>
+          <p>Safety Officer</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/Hiking_Guide.webp" alt="Hiking Guide photo" loading="lazy">
+        <div>
+          <h2>Claudia Camposano</h2>
+          <p>Hiking Guide</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/Excursion_Coordinator.webp" alt="Excursion Coordinator photo" loading="lazy">
+        <div>
+          <h2>Susana Vican</h2>
+          <p>Excursion Coordinator</p>
+        </div>
+      </div>
+    </div>
+    <h2>Explore new experiences</h2>
+    <div class="cards-container">
+      <img src="images/hiking_photo_2.webp" alt="hiking_photo_2" loading="lazy">
+      <div>
+        <p>Hiking is a great way to connect with nature, offering both physical exercise and mental clarity. Trails through forests and mountains help us escape daily stress and enjoy beautiful landscapes.</p>
+        <hr>
+        <a href="/join.html" class="btn">Join Us</a>
+      </div>
+    </div>
+    <div class="cards-container">
+      <div>
+        <p>It also allows us to learn about local plants and wildlife, enhancing our connection to the environment.</p>
+        <hr>
+        <a href="/join.html" class="btn">Join Us</a>
+      </div>
+      <img src="images/hiking_photo_3.webp" alt="hiking_photo_3" loading="lazy">
+    </div>
+    <div class="cards-container">
+      <img src="images/hiking_photo_4.webp" alt="hiking_photo_4" loading="lazy">
+      <div>
+        <p>Each hike presents new challenges, building resilience and providing a sense of accomplishment, no matter the distance.</p>
+        <hr>
+        <a href="/join.html" class="btn">Join Us</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="col p2">
+    <div>
+      <a href="https://github.com/bitfws" target="_blank" rel="noopener noreferrer">
+        <img src="images/github-logo.svg" alt="GitHub logo" loading="lazy">
+      </a>
+      <a href="https://ec.linkedin.com/in/noctenem" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin-logo.svg" alt="LinkedIn logo" loading="lazy">
+      </a>
+      <a href="https://www.reddit.com/user/bitfws" target="_blank" rel="noopener noreferrer">
+        <img src="images/reddit-logo.svg" alt="Reddit logo" loading="lazy">
+      </a>
+    </div>
+    <div>
+      <p id="currentyear"></p>
+      <small id="lastModified"></small>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

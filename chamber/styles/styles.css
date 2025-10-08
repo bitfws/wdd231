@@ -1,6 +1,6 @@
 :root {
   --primary-color: #181c1d;
-  --seconday-color: #f3f6f4;
+  --secondary-color: #f3f6f4;
   --gray: #f1f3f5;
   --dark: #171717;
   --border-color: #dde5ec;
@@ -30,7 +30,7 @@ button,
 .btn {
   cursor: pointer;
   background-color: var(--dark);
-  color: var(--seconday-color);
+  color: var(--secondary-color);
   border-radius: 5px;
   padding: 5px;
   margin: 10px 0;
@@ -50,14 +50,15 @@ button,
 header,
 footer,
 #view_selector {
-  justify-content: space-between !important;
+  display: flex;
+  justify-content: space-between;
   background-color: var(--primary-color);
   padding: 20px;
 }
 
 header *,
 footer * {
-  color: var(--seconday-color);
+  color: var(--secondary-color);
 }
 
 #site img,
@@ -70,8 +71,7 @@ footer * {
 
 #theme-selector,
 #social a img {
-  filter: brightness(0) invert(100%) sepia(100%) saturate(500%)
-    hue-rotate(180deg);
+  filter: brightness(0) invert(100%) sepia(100%) saturate(500%) hue-rotate(180deg);
 }
 
 #navigation nav {
@@ -105,11 +105,11 @@ footer * {
 
 #view_selector {
   display: flex;
-  justify-content: center !important;
+  justify-content: center;
 }
 
 #view_selector button {
-  background-color: var(--seconday-color);
+  background-color: var(--secondary-color);
   padding: 10px 20px;
   border-radius: 10px;
   margin: 10px;
@@ -131,7 +131,7 @@ footer * {
   border-radius: 20px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 700px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -145,6 +145,40 @@ footer * {
 
   .membership-cards {
     width: 80%;
+  }
+
+  .discover-cards .card {
+    display: grid;
+    grid-template-areas:
+      "photo"
+      "title"
+      "address"
+      "description";
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .discover-cards .card img {
+    width: 100%;
+    margin: 0;
+    height: auto;
+    object-fit: cover;
+    grid-area: photo;
+  }
+
+  .discover-cards .card h2 {
+    font-size: 1.5rem;
+    grid-area: title;
+  }
+
+  .discover-cards .card .address {
+    grid-area: address;
+    padding: 15px;
+  }
+
+  .discover-cards .card .description {
+    grid-area: description;
+    padding: 15px;
   }
 }
 
@@ -199,7 +233,7 @@ footer * {
   right: 50vw;
   transform: translateX(50%);
   z-index: 2;
-  background-color: var(--seconday-color);
+  background-color: var(--secondary-color);
   color: var(--primary-color);
   padding: 15px;
   border-radius: 10px;
@@ -207,7 +241,7 @@ footer * {
 
 #home-sections div h2 {
   background-color: var(--primary-color);
-  color: var(--seconday-color);
+  color: var(--secondary-color);
   padding: 4px;
   margin-bottom: 10px;
 }
@@ -260,6 +294,7 @@ footer * {
 .container.grid {
   grid-template-columns: repeat(2, 1fr);
 }
+
 .membership-cards {
   animation: fadeInCard 1s ease forwards;
 }
@@ -301,7 +336,7 @@ label select {
     height: initial;
     position: initial;
     flex-direction: row;
-    display: flex !important;
+    display: flex;
   }
 
   #navigation nav * {
@@ -342,11 +377,10 @@ label select {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   margin: auto;
- 
 }
 
 .modal-content {
-  background: var(--seconday-color);
+  background: var(--secondary-color);
   padding: 2rem;
   margin: 15% auto;
   width: 80%;
@@ -361,4 +395,86 @@ label select {
   position: absolute;
   right: 22%;
   top: 20%;
+}
+
+.sidebar {
+  background-color: #fff;
+  padding: 10px;
+  margin: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.discover-cards .card {
+  display: grid;
+  grid-template-areas:
+    "photo title"
+    "photo address"
+    "photo description";
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.discover-cards .card h2 {
+  font-size: 1.5rem;
+  grid-area: title;
+}
+
+.discover-cards .card .address {
+  grid-area: address;
+  padding: 15px;
+}
+
+.discover-cards .card img {
+  width: 200px;
+  margin: 10px auto;
+  height: auto;
+  object-fit: cover;
+  grid-area: photo;
+  transition: transform linear 100ms;
+}
+
+.discover-cards .card img:hover {
+  transform: scale(1.02);
+}
+
+.discover-cards .card .description {
+  grid-area: description;
+  padding: 15px;
+}
+
+
+@media screen and (max-width: 480px) {
+  .discover-cards .card {
+    display: grid;
+    grid-template-areas:
+    "title"
+    "photo"
+      "address"
+      "description";
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .discover-cards .card img {
+    width: 100%;
+    margin: 0;
+    height: auto;
+    object-fit: cover;
+    grid-area: photo;
+  }
+
+  .discover-cards .card h2 {
+    font-size: 1.5rem;
+    grid-area: title;
+  }
+
+  .discover-cards .card .address {
+    grid-area: address;
+    padding: 15px;
+  }
+
+  .discover-cards .card .description {
+    grid-area: description;
+    padding: 15px;
+  }
 }
