@@ -1,79 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timbuktu Chamber of Commerce | Directory</title>
-  <meta name="author" content="Sairi Conejo Flores">
-  <meta name="description" content="Directory page of the Timbuktu Chamber of Commerce">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/scripts.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-  <meta property="og:title" content="Timbuktu Chamber of Commerce Directory">
-  <meta property="og:description" content="Discover local businesses in Timbuktu.">
-  <meta property="og:image" content="https://bitfws.github.io/wdd231/chamber/images/timbuktu-logo.webp">
-  <meta property="og:url" content="https://bitfws.github.io/wdd231/chamber/directory">
-  <meta property="og:type" content="website">
+  <title>Directorio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <div id="site" class="flex-center">
-      <img src="images/timbuktu-logo.webp" alt="Timbuktu Chamber of Commerce logo" loading="lazy">
-      <span>Timbuktu Chamber of Commerce</span>
+    <div id="site">
+      <img src="logo.png" alt="Logo" id="site-logo">
     </div>
-    <div id="navigation" class="flex-center">
-      <nav id="menu">
-        <a href="index.html">home</a>
-        <a href="discover.html">discover</a>
-        <a href="directory.html">directory</a>
-        <a href="join.html">join</a>
+    <div id="theme-selector">
+      <img src="theme-icon.png" alt="Theme Selector">
+    </div>
+    <div id="navigation">
+      <button id="menu-mobile">☰</button>
+      <nav>
+        <a href="#" class="active">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Directorio</a>
+        <a href="#">Contacto</a>
       </nav>
-      <span class="flex-center">
-        <img src="images/theme-selector.svg" alt="theme selector logo" loading="lazy" id="theme-selector">
-        <button id="menu-mobile" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
-      </span>
     </div>
   </header>
 
-  <main>
-    <h1 class="currentPageTitle">Directory</h1>
-    <div id="view_selector">
-      <button id="grid">Grid</button>
-      <button id="list">List</button>
-    </div>
-    <div class="container">
-      <div id="content" class="grid"></div>
-    </div>
-  </main>
+  <!-- Hero Section -->
+  <section id="hero">
+    <img src="hero-image.jpg" alt="Hero Image">
+    <button>Ver Más</button>
+  </section>
 
+  <!-- Directorio -->
+  <section class="container">
+    <h1>Directorio</h1>
+    <div class="grid discover-cards">
+      <!-- Tarjetas del Directorio -->
+      <div class="card">
+        <img src="business1.jpg" alt="Negocio 1">
+        <h2>Negocio 1</h2>
+        <p class="address">Dirección: Calle Ficticia 123</p>
+        <p class="description">Descripción corta del negocio.</p>
+      </div>
+
+      <div class="card">
+        <img src="business2.jpg" alt="Negocio 2">
+        <h2>Negocio 2</h2>
+        <p class="address">Dirección: Calle Ejemplo 456</p>
+        <p class="description">Descripción breve de otro negocio.</p>
+      </div>
+
+      <div class="card">
+        <img src="business3.jpg" alt="Negocio 3">
+        <h2>Negocio 3</h2>
+        <p class="address">Dirección: Avenida Demo 789</p>
+        <p class="description">Un negocio increíble con muchos servicios.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal para detalles del negocio (ejemplo) -->
+  <div class="modal" id="business-modal">
+    <div class="modal-content">
+      <span class="close" id="close-modal">×</span>
+      <h2>Detalles del Negocio</h2>
+      <p>Más información sobre este negocio...</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <div id="information">
-      <p>Timbuktu Chamber of Commerce</p>
-      <p>10 Rue De La Paix</p>
-      <p>Timbuktu, Mali 999</p>
-      <p>info@timbuktucc.oth</p>
-      <p>(223) 555-2300</p>
+    <div id="social">
+      <a href="#" target="_blank"><img src="social-icon.png" alt="Redes sociales"></a>
     </div>
-    <div id="social" class="flex-center">
-      <a href="https://github.com/bitfws" target="_blank" rel="noopener noreferrer">
-        <img src="images/github-logo.svg" alt="GitHub logo" loading="lazy">
-      </a>
-      <a href="https://ec.linkedin.com/in/noctenem" target="_blank" rel="noopener noreferrer">
-        <img src="images/linkedin-logo.svg" alt="LinkedIn logo" loading="lazy">
-      </a>
-      <a href="https://www.reddit.com/user/bitfws" target="_blank" rel="noopener noreferrer">
-        <img src="images/reddit-logo.svg" alt="Reddit logo" loading="lazy">
-      </a>
-    </div>
-    <div id="data">
-      <p>WDD231 Class Project</p>
-      <p>Sairi Conejo Flores</p>
-      <span id="currentyear"></span>
-      <p id="lastModified"></p>
+    <div id="theme-selector">
+      <img src="theme-icon.png" alt="Selector de Tema">
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Lógica para el menú móvil
+    const menuButton = document.getElementById('menu-mobile');
+    const nav = document.querySelector('#navigation nav');
+    menuButton.addEventListener('click', () => {
+      nav.style.top = nav.style.top === '0' ? '-100vw' : '0';
+      nav.style.display = nav.style.top === '0' ? 'flex' : 'none';
+    });
+
+    // Lógica para cerrar el modal
+    const modal = document.getElementById('business-modal');
+    const closeModal = document.getElementById('close-modal');
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  </script>
 </body>
 </html>

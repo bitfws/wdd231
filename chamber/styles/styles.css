@@ -47,6 +47,7 @@ button,
   gap: 0 10px;
 }
 
+/* Header & Footer */
 header,
 footer,
 #view_selector {
@@ -74,6 +75,7 @@ footer * {
   filter: brightness(0) invert(100%) sepia(100%) saturate(500%) hue-rotate(180deg);
 }
 
+/* Mobile Navigation */
 #navigation nav {
   height: 100vh;
   position: absolute;
@@ -115,6 +117,7 @@ footer * {
   margin: 10px;
 }
 
+/* Grid Layout */
 .container {
   width: 90vw;
   margin: 20px auto;
@@ -129,8 +132,14 @@ footer * {
 
 .grid .card {
   border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 
+.grid .card:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Grid */
 @media screen and (min-width: 700px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -140,7 +149,6 @@ footer * {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  
 }
 
 @media screen and (max-width: 480px) {
@@ -153,7 +161,6 @@ footer * {
     width: 80%;
   }
 
-<<<<<<< HEAD
   .discover-cards .card {
     display: grid;
     grid-template-areas:
@@ -186,17 +193,10 @@ footer * {
   .discover-cards .card .description {
     grid-area: description;
     padding: 15px;
-=======
-    .discover-cards .card {
-    display: grid;
-    grid-template-areas:
-      'photo title'
-      'photo description'
-      'photo address';
->>>>>>> 9cc5067291a9093ecf6919632817a95c302e1889
   }
 }
 
+/* List Layout */
 .list {
   display: flex;
   flex-direction: column;
@@ -231,7 +231,7 @@ footer * {
   text-decoration: underline;
 }
 
-/* home */
+/* Hero Section */
 #hero {
   position: relative;
 }
@@ -305,7 +305,7 @@ footer * {
   height: auto;
 }
 
-/* join */
+/* Join Section */
 .container.grid {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -345,7 +345,7 @@ label select {
   resize: none;
 }
 
-/* general */
+/* General Responsive Design */
 @media screen and (min-width: 768px) {
   #navigation nav {
     height: initial;
@@ -384,6 +384,7 @@ label select {
   }
 }
 
+/* Modal */
 .modal {
   position: fixed;
   left: 0;
@@ -412,6 +413,7 @@ label select {
   top: 20%;
 }
 
+/* Sidebar */
 .sidebar {
   background-color: #fff;
   padding: 10px;
@@ -419,23 +421,15 @@ label select {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Discover Cards */
 .discover-cards .card {
   display: grid;
-<<<<<<< HEAD
   grid-template-areas:
     "photo title"
     "photo address"
     "photo description";
   grid-template-columns: 1fr 2fr;
   gap: 10px;
-=======
-  justify-content: center;
-  grid-template-areas:
-    'title'
-    'photo'
-    'description'
-    'address';
->>>>>>> 9cc5067291a9093ecf6919632817a95c302e1889
 }
 
 .discover-cards .card h2 {
@@ -443,15 +437,9 @@ label select {
   grid-area: title;
 }
 
-<<<<<<< HEAD
 .discover-cards .card .address {
   grid-area: address;
   padding: 15px;
-=======
-.discover-cards .card .address{
-  padding: 15px;
-  grid-area: address;
->>>>>>> 9cc5067291a9093ecf6919632817a95c302e1889
 }
 
 .discover-cards .card img {
@@ -463,7 +451,6 @@ label select {
   transition: transform linear 100ms;
 }
 
-<<<<<<< HEAD
 .discover-cards .card img:hover {
   transform: scale(1.02);
 }
@@ -473,13 +460,13 @@ label select {
   padding: 15px;
 }
 
-
+/* Mobile Styles */
 @media screen and (max-width: 480px) {
   .discover-cards .card {
     display: grid;
     grid-template-areas:
-    "title"
-    "photo"
+      "title"
+      "photo"
       "address"
       "description";
     grid-template-columns: 1fr;
@@ -509,10 +496,3 @@ label select {
     padding: 15px;
   }
 }
-=======
-.discover-cards .card img:hover {transform: scale(1.02);}
-
-.discover-cards .card .description {
-  grid-area: description;
-}
->>>>>>> 9cc5067291a9093ecf6919632817a95c302e1889
