@@ -19,7 +19,10 @@
   list-style: none;
 }
 
-button, .btn {cursor: pointer;}
+button,
+.btn {
+  cursor: pointer;
+}
 
 .btn {
   display: inline-block;
@@ -28,30 +31,40 @@ button, .btn {cursor: pointer;}
   padding: 10px;
 }
 
-b {font-weight: bold;}
+b {
+  font-weight: bold;
+}
 
-.active {text-decoration: underline;}
-.p1x2 {padding:10px 20px;}
-.p2 {padding:20px;}
+.active {
+  text-decoration: underline;
+}
+
+.p1x2 {
+  padding: 10px 20px;
+}
+
+.p2 {
+  padding: 20px;
+}
 
 h2 {
   text-align: center;
 }
 
-.row{
+.row {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 0 10px;
+  gap: 10px;
 }
 
-.col{
+.col {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px 0;
+  gap: 10px;
 }
 
 .card {
@@ -70,9 +83,13 @@ h2 {
   align-items: center;
 }
 
-.card * {text-align: center;}
+.card * {
+  text-align: center;
+}
 
-.card div {padding: 20px;}
+.card div {
+  padding: 20px;
+}
 
 .card img {
   object-fit: cover;
@@ -91,28 +108,32 @@ header {
   box-shadow: 0 2px 4px var(--border-color);
 }
 
-header img {height: 50px;}
-div span img {display: none;}
+header img {
+  height: 50px;
+}
+
+div span img {
+  display: none;
+}
 
 nav {
-  position: absolute;
-  top: -100vh;
-  left: 0;
+  position: fixed;
   height: 100vh;
+  left: 0;
+  top: -100vh;
   width: 100%;
   background-color: var(--border-color);
-  transition: top linear 100ms;
+  transition: top 100ms linear;
 }
 
 nav a {
   font-size: 2rem;
   padding: 20px;
   text-align: center;
+  display: inline-block;
 }
 
 nav a:hover {
-  display: inline-block;
-  width: 100%;
   background-color: var(--secondary-color);
 }
 
@@ -123,8 +144,11 @@ nav a:hover {
   z-index: 1;
 }
 
-footer {text-align: center;}
-footer> div:nth-of-type(1){
+footer {
+  text-align: center;
+}
+
+footer > div:nth-of-type(1) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,33 +170,113 @@ main {
   margin: 50px auto;
 }
 
-
 /* JOIN */
-input, textarea {
+input,
+textarea {
   border: 1px solid var(--border-color);
   padding: 10px;
   border-radius: 2px;
   width: 300px;
 }
 
-textarea {resize: none;}
-
-@media screen and (min-width: 768px){
-div span img {
-  display: inline-block;
-  height: 30px;
+textarea {
+  resize: none;
 }
 
-nav {
-  position: initial;
-  height: inherit;
-  width: initial;
-  background-color: transparent;
-}
-#menu-mobile {display: none;}
-
-.cards-container {
-  flex-direction: row;
+/* DISCOVER */
+#discover-main {
+  display: flex;
+  justify-content: center;
 }
 
+#discover {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 30px;
+  margin: 20px auto;
+}
+
+#discover .card img {
+  height: 200px;
+}
+
+.modal {
+  height: 100vh;
+  width: 100%;
+  backdrop-filter: blur(2px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 20px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content img {
+  margin-top: 5rem;
+  height: 90%;
+  width: 90%;
+}
+
+.modal-content p {font-size: 4rem;font-weight:400; text-shadow: 0px 2px 3px var(--secondary-color);}
+
+.modal .close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+#cookies {
+  height: 100px;
+  width: 80%;
+  margin: auto;
+  background-color: var(--border-color);
+  border-radius: 20px;
+  position: fixed;
+  bottom: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 400px) {
+  #discover {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  div span img {
+    display: inline-block;
+    height: 30px;
+  }
+
+  nav {
+    position: initial;
+    height: inherit;
+    width: initial;
+    background-color: transparent;
+  }
+
+  #menu-mobile {
+    display: none;
+  }
+
+  .cards-container {
+    flex-direction: row;
+  }
+
+  #discover {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

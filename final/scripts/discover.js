@@ -1,37 +1,54 @@
-import fetchingData from './getData.js';
+import modal from './modal.js';
 
-export default async function showDiscover(){
-    const discover = document.getElementById('discover')
-    const places = await fetchingData('../data/places.json').then(result => result)
+export default async function showDiscover() {
+    const discover = document.getElementById('discover');
 
-    places.forEach(place => {
-    const card = document.createElement('div');
-    card.classList.add('card');
+    try {
+        const response = await fetch('../data/places.json');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
-    const img = document.createElement('img');
-    img.src = `images/${place.image_url}`;
-    img.alt = `${place.name} Avatar`;
-    img.loading = 'lazy';
-    img.width = 200;
-    img.height = 200;
+        const places = await response.json();
 
-    const name = document.createElement('h3');
-    name.textContent = place.name;
+        places.forEach(place => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.style.cursor = 'pointer'
 
-    const address = document.createElement('p');
-    address.textContent = place.location;
+            const img = document.createElement('img');
+            img.src = `images/${place.image_url}`;
+            img.alt = `${place.name} Avatar`;
+            img.loading = 'lazy';
+            img.width = 200;
+            img.height = 200;
 
-    const hr = document.createElement('hr');
+            card.addEventListener('click', () => {
+                modal(place)
+            })
 
-    const highlight = document.createElement('p');
-    highlight.textContent = place.highlight;
+            const name = document.createElement('h3');
+            name.textContent = place.name;
 
-    const difficulty = document.createElement('p');
-    difficulty.textContent = place.difficulty;
+            const address = document.createElement('p');
+            address.textContent = place.location;
 
+            const hr = document.createElement('hr');
 
-    card.append(img, name, address, hr, highlight, difficulty);
-    discover.appendChild(card);
-    });
+            const highlight = document.createElement('p');
+            highlight.textContent = place.highlight;
 
+            const difficulty = document.createElement('p');
+            difficulty.textContent = place.difficulty;
+
+            card.append(img, name, address, hr, highlight, difficulty);
+            discover.appendChild(card);
+        });
+    } catch (error) {
+        console.error('Error fetching the data:', error);
+        const errorMessage = document.createElement('p');
+        errorMessage.textContent = 'Sorry, we couldn\'t load the places data. Please try again later.';
+        discover.appendChild(errorMessage);
+    }
 }

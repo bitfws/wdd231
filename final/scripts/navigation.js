@@ -28,9 +28,13 @@ export default function navigation(currentPage) {
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth <= 768) {
+      menuMobile.textContent = "☰";
       nav.classList.remove('col')
       nav.style.top = '-100vh'
+    } else {
+      menuMobile.textContent = "X";
+      nav.style.top = '0'
     }
 })
 }

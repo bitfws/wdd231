@@ -1,8 +1,8 @@
 export default function footer() {
   document.getElementById(
-    "currentyear"
+    'currentyear'
   ).textContent = `© Hiking and Trail Exploration ${new Date().getFullYear()}`;
   document.getElementById(
-    "lastModified"
+    'lastModified'
   ).textContent = `Last Modification: ${document.lastModified}`;
 }
