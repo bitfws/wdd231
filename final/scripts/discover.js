@@ -15,7 +15,7 @@ export default async function showDiscover() {
 
       const img = document.createElement('img');
       img.src = `images/${place.image_url}`;
-      img.alt = `${place.name} Avatar`;
+      img.alt = `images/${place.name}`;
       img.loading = 'lazy';
       img.width = 200;
       img.height = 200;
