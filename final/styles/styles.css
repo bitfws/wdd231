@@ -239,7 +239,7 @@ textarea {
   cursor: pointer;
 }
 
-#cookies {
+.cookies {
   height: 100px;
   width: 80%;
   margin: auto;

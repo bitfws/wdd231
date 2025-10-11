@@ -5,7 +5,7 @@
     "difficulty": "Moderate to Hard",
     "distance": "3000 km of trails",
     "highlight": "Impressive waterfalls and rock formations like El Capitan and Half Dome.",
-    "image_url": "../images/Yosemite_National_Park.webp"
+    "image_url": "../images/yosemite_national_park.webp"
   },
   {
     "name": "Inca Trail",
@@ -13,7 +13,7 @@
     "difficulty": "Hard",
     "distance": "43 km",
     "highlight": "Historical trail leading to the ancient city of Machu Picchu.",
-    "image_url": "../images/Inca_Trail.webp"
+    "image_url": "../images/inca_trail.webp"
   },
   {
     "name": "Seven Lakes Route",
@@ -21,7 +21,7 @@
     "difficulty": "Easy to Moderate",
     "distance": "27 km",
     "highlight": "A trail surrounded by glacial lakes and mountains in the Andes region.",
-    "image_url": "../images/Seven_Lakes_Route.webp"
+    "image_url": "../images/seven_lakes_route.webp"
   },
   {
     "name": "Grand Canyon Rim-to-Rim Trail",
@@ -29,7 +29,7 @@
     "difficulty": "Hard",
     "distance": "27.3 km",
     "highlight": "A challenging trail that crosses the Grand Canyon from one rim to the other.",
-    "image_url": "../images/Grand_Canyon_Rim-to-Rim_Trail.webp"
+    "image_url": "../images/grand_canyon_rim-to-rim_trail.webp"
   },
   {
     "name": "Camino de Santiago",
@@ -37,7 +37,7 @@
     "difficulty": "Moderate",
     "distance": "800 km",
     "highlight": "A historic pilgrimage route across Spain, ending at Santiago de Compostela.",
-    "image_url": "../images/Camino_de_Santiago.webp"
+    "image_url": "../images/camino_de_santiago.webp"
   },
   {
     "name": "Dolomites Mountains",
@@ -45,7 +45,7 @@
     "difficulty": "Moderate to Hard",
     "distance": "Over 1200 km of trails",
     "highlight": "Impressive rock formations and panoramic views of the Dolomites Alps.",
-    "image_url": "../images/Dolomites_Mountains.webp"
+    "image_url": "../images/dolomites_mountains.webp"
   },
   {
     "name": "Torres del Paine",
@@ -53,7 +53,7 @@
     "difficulty": "Hard",
     "distance": "W Circuit - 74 km",
     "highlight": "A National Park famous for its mountains, glaciers, and turquoise lakes.",
-    "image_url": "../images/Torres_del_Paine.webp"
+    "image_url": "../images/torres_del_paine.webp"
   },
   {
     "name": "Mount Fuji",
@@ -61,7 +61,7 @@
     "difficulty": "Hard",
     "distance": "8 km ascent",
     "highlight": "The iconic volcano and highest mountain in Japan, famous for its views and nature.",
-    "image_url": "../images/Mount_Fuji.webp"
+    "image_url": "../images/mount_fuji.webp"
   },
   {
     "name": "Sentiero Azzurro",
@@ -69,7 +69,7 @@
     "difficulty": "Easy to Moderate",
     "distance": "12 km",
     "highlight": "A trail that connects the beautiful coastal villages of Cinque Terre.",
-    "image_url": "../images/Sentiero_Azzurro.webp"
+    "image_url": "../images/sentiero_azzurro.webp"
   },
   {
     "name": "Banff National Park",
@@ -77,7 +77,7 @@
     "difficulty": "Moderate",
     "distance": "1500 km of trails",
     "highlight": "Trails with views of Rocky Mountains, turquoise lakes, and wildlife.",
-    "image_url": "../images/Banff_National_Park.webp"
+    "image_url": "../images/banff_national_park.webp"
   },
   {
     "name": "Annapurna Circuit",
@@ -85,7 +85,7 @@
     "difficulty": "Hard",
     "distance": "150 km",
     "highlight": "One of the most famous trekking routes in the world, with views of Himalayan peaks.",
-    "image_url": "../images/Annapurna_Circuit.webp"
+    "image_url": "../images/annapurna_circuit.webp"
   },
   {
     "name": "Na Pali Coast Trail",
@@ -93,7 +93,7 @@
     "difficulty": "Hard",
     "distance": "22 km",
     "highlight": "A trail that runs along the spectacular Na Pali coastline, known for its cliffs and beaches.",
-    "image_url": "../images/Na_Pali_Coast_Trail.webp"
+    "image_url": "../images/na_pali_coast_trail.webp"
   },
   {
     "name": "Laugavegur Trail",
@@ -101,7 +101,7 @@
     "difficulty": "Moderate",
     "distance": "55 km",
     "highlight": "A trail in Iceland offering volcanic landscapes, glaciers, and geysers.",
-    "image_url": "../images/Laugavegur_Trail.webp"
+    "image_url": "../images/laugavegur_trail.webp"
   },
   {
     "name": "Mount Kilimanjaro",
@@ -109,7 +109,7 @@
     "difficulty": "Hard",
     "distance": "50 km",
     "highlight": "Africa's highest point, a volcanic mountain challenging trekkers to reach its summit.",
-    "image_url": "../images/Mount_Kilimanjaro.webp"
+    "image_url": "../images/mount_kilimanjaro.webp"
   },
   {
     "name": "Amazon River",
@@ -117,6 +117,6 @@
     "difficulty": "Easy",
     "distance": "Over 4000 km of jungle trails",
     "highlight": "Explore the world's largest tropical rainforest, home to incredible biodiversity.",
-    "image_url": "../images/Amazon_River.webp"
+    "image_url": "../images/amazon_river.webp"
   }
 ]

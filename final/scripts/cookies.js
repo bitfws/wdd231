@@ -1,5 +1,5 @@
 export default function cookies() {
-  const botones = document.querySelectorAll('#cookies-btns');
+  const botones = document.querySelectorAll('.cookies-btns');
 
   botones.forEach((boton) => {
     boton.addEventListener('click', function () {
