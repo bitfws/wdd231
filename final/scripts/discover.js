@@ -15,10 +15,10 @@ export default async function showDiscover() {
 
       const img = document.createElement('img');
       img.src = `images/${place.image_url}`;
-      img.alt = `images/${place.name}`;
+      img.alt = `${place.name}`;
       img.loading = 'lazy';
-      img.width = 200;
-      img.height = 200;
+      img.width = 300;
+      img.height = 300;
 
       card.addEventListener('click', () => {
         modal(place);
