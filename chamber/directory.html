@@ -1,29 +1,40 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Directorio</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Timbuktu Chamber of Commerce | Directory</title>
+  <meta name="author" content="Sairi Conejo Flores">
+  <meta name="description" content="Directory page of the Timbuktu Chamber of Commerce">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/scripts.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Timbuktu Chamber of Commerce Discover">
+  <meta property="og:description" content="Directory local businesses in Timbuktu.">
+  <meta property="og:image" content="https://bitfws.github.io/wdd231/chamber/images/timbuktu-logo.webp">
+  <meta property="og:url" content="https://bitfws.github.io/wdd231/chamber/directory">
+  <meta property="og:type" content="website">
 </head>
 <body>
-
-  <!-- Header -->
   <header>
     <div id="site">
-      <img src="logo.png" alt="Logo" id="site-logo">
-    </div>
-    <div id="theme-selector">
-      <img src="theme-icon.png" alt="Theme Selector">
+      <img src="images/timbuktu-logo.webp" alt="Timbuktu Chamber of Commerce logo" loading="lazy">
+      <span>Timbuktu Chamber of Commerce</span>
     </div>
     <div id="navigation">
-      <button id="menu-mobile">☰</button>
-      <nav>
-        <a href="#" class="active">Inicio</a>
-        <a href="#">Servicios</a>
-        <a href="#">Directorio</a>
-        <a href="#">Contacto</a>
+      <nav id="menu">
+        <a href="index.html">home</a>
+        <a href="discover.html">discover</a>
+        <a href="directory.html">directory</a>
+        <a href="join.html">join</a>
       </nav>
+      <span>
+        <img src="images/theme-selector.svg" alt="theme selector logo" loading="lazy" id="theme-selector">
+        <button id="menu-mobile" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">☰</button>
+      </span>
     </div>
   </header>
 

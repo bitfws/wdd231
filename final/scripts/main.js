@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       break;
   }
 
-  cookies()
+  cookies();
 
   footer();
 });
