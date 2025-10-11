@@ -6,7 +6,7 @@ export default async function showDiscover() {
   const discover = document.getElementById('discover');
 
   try {
-    const response = await fetchingData('/../data/places.json');
+    const response = await fetchingData('data/places.json');
 
     response.forEach((place) => {
       const card = document.createElement('div');
