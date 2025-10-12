@@ -252,14 +252,14 @@ textarea {
 }
 .cookies-btns {text-align: center;}
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 660px) {
   #discover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   div span img {
     display: inline-block;
     height: 30px;
