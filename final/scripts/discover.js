@@ -14,7 +14,7 @@ export default async function showDiscover() {
       card.style.cursor = 'pointer';
 
       const img = document.createElement('img');
-      img.src = `images/${place.image_url}`; //
+      img.src = `images/${place.image_url}`;
       img.alt = `${place.name}`;
       img.loading = 'lazy';
       img.width = 300;
